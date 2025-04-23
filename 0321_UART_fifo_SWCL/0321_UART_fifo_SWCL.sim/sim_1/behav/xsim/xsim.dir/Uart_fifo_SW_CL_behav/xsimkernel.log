@@ -1,0 +1,7 @@
+Running: xsim.dir/Uart_fifo_SW_CL_behav/xsimk.exe -simmode gui -wdb Uart_fifo_SW_CL_behav.wdb -simrunnum 0 -socket 65401
+Design successfully loaded
+Design Loading Memory Usage: 7824 KB (Peak: 7824 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 8564 KB (Peak: 8564 KB)
+Simulation CPU Usage: 31 ms

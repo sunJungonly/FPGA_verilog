@@ -1,0 +1,50 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Mar 24 09:57:31 2025
+# Process ID: 4192
+# Current directory: D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.runs/impl_1
+# Command line: vivado.exe -log Uart_fifo_SW_CL.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Uart_fifo_SW_CL.tcl -notrace
+# Log file: D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.runs/impl_1/Uart_fifo_SW_CL.vdi
+# Journal file: D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Uart_fifo_SW_CL.tcl -notrace
+Command: link_design -top Uart_fifo_SW_CL -part xc7a35tcpg236-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1106.191 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 34 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/constrs_1/imports/working/Basys-3-Master.xdc]
+Finished Parsing XDC File [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/constrs_1/imports/working/Basys-3-Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1106.191 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+
+7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net U_Uart_cu/rx_rd has multiple drivers: U_Uart_Fifo/U_Fifo_TX/U_FIFO_CU/rptr_reg[3]_i_3/O, and U_Uart_cu/rd_reg/Q.
+INFO: [Project 1-461] DRC finished with 1 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.550 . Memory (MB): peak = 1106.191 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 24 09:57:40 2025...

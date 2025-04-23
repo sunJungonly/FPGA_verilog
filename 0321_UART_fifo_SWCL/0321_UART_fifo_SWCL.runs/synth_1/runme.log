@@ -1,0 +1,485 @@
+
+*** Running vivado
+    with args -log Uart_fifo_SW_CL.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Uart_fifo_SW_CL.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source Uart_fifo_SW_CL.tcl -notrace
+Command: synth_design -top Uart_fifo_SW_CL -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16212
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1106.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Uart_fifo_SW_CL' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/new/Uart_fifo_SW_CL.v:3]
+INFO: [Synth 8-6157] synthesizing module 'TOP_uart_fifo' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/top_uart.v:3]
+INFO: [Synth 8-6157] synthesizing module 'top_uart' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/top_uart.v:71]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/top_uart.v:116]
+	Parameter IDLE bound to: 2'b00 
+	Parameter START bound to: 2'b01 
+	Parameter DATA bound to: 2'b10 
+	Parameter STOP bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (1#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/top_uart.v:116]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/top_uart.v:226]
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter START bound to: 1 - type: integer 
+	Parameter DATA bound to: 2 - type: integer 
+	Parameter STOP bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (2#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/top_uart.v:226]
+INFO: [Synth 8-6157] synthesizing module 'baud_tick_gen' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/top_uart.v:321]
+	Parameter BAUD_RATE bound to: 9600 - type: integer 
+	Parameter BAUD_COUNT bound to: 651 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'baud_tick_gen' (3#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/top_uart.v:321]
+INFO: [Synth 8-6155] done synthesizing module 'top_uart' (4#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/top_uart.v:71]
+INFO: [Synth 8-6157] synthesizing module 'fifo' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/fifo.v:23]
+INFO: [Synth 8-6157] synthesizing module 'register_file' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/fifo.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (5#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/fifo.v:62]
+INFO: [Synth 8-6157] synthesizing module 'fifo_control_unit' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/fifo.v:88]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/fifo.v:130]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_control_unit' (6#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/fifo.v:88]
+INFO: [Synth 8-6155] done synthesizing module 'fifo' (7#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/fifo.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'TOP_uart_fifo' (8#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/top_uart.v:3]
+INFO: [Synth 8-6157] synthesizing module 'uart_CU' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/new/Uart_fifo_SW_CL.v:85]
+	Parameter IDLE bound to: 3'b000 
+	Parameter RUN bound to: 3'b100 
+	Parameter CLEAR bound to: 3'b101 
+	Parameter HOUR bound to: 3'b001 
+	Parameter MIN bound to: 3'b010 
+	Parameter SEC bound to: 3'b011 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/new/Uart_fifo_SW_CL.v:127]
+INFO: [Synth 8-6155] done synthesizing module 'uart_CU' (9#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/new/Uart_fifo_SW_CL.v:85]
+INFO: [Synth 8-6157] synthesizing module 'top_stopwatch' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/top_stopwatch.v:2]
+INFO: [Synth 8-6157] synthesizing module 'led' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/top_stopwatch.v:322]
+INFO: [Synth 8-226] default block is never used [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/top_stopwatch.v:327]
+INFO: [Synth 8-6155] done synthesizing module 'led' (10#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/top_stopwatch.v:322]
+INFO: [Synth 8-6157] synthesizing module 'btn_debounce' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0310_stopwatch_fsm/0310_stopwatch_fsm.srcs/sources_1/imports/0310_stopwatch_fsm/btn_debounce.v:3]
+WARNING: [Synth 8-567] referenced signal 'q_reg' should be on the sensitivity list [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0310_stopwatch_fsm/0310_stopwatch_fsm.srcs/sources_1/imports/0310_stopwatch_fsm/btn_debounce.v:47]
+INFO: [Synth 8-6155] done synthesizing module 'btn_debounce' (11#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0310_stopwatch_fsm/0310_stopwatch_fsm.srcs/sources_1/imports/0310_stopwatch_fsm/btn_debounce.v:3]
+INFO: [Synth 8-6157] synthesizing module 'stopwatch_cu' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/stopwatch_cu.v:2]
+	Parameter STOP bound to: 2'b00 
+	Parameter RUN bound to: 2'b01 
+	Parameter CLEAR bound to: 2'b10 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/stopwatch_cu.v:27]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/stopwatch_cu.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'stopwatch_cu' (12#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/stopwatch_cu.v:2]
+INFO: [Synth 8-6157] synthesizing module 'clock_cu' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/top_stopwatch.v:162]
+	Parameter IDLE bound to: 2'b00 
+	Parameter HOUR bound to: 2'b01 
+	Parameter MIN bound to: 2'b10 
+	Parameter SEC bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'clock_cu' (13#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/top_stopwatch.v:162]
+INFO: [Synth 8-6157] synthesizing module 'stopwatch_dp' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/stopwatch_dp.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clk_div_100' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/stopwatch_dp.v:111]
+	Parameter FCOUNT bound to: 1000000 - type: integer 
+WARNING: [Synth 8-6090] variable 'count_next' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/stopwatch_dp.v:147]
+WARNING: [Synth 8-6090] variable 'clk_next' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/stopwatch_dp.v:148]
+INFO: [Synth 8-6155] done synthesizing module 'clk_div_100' (14#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/stopwatch_dp.v:111]
+INFO: [Synth 8-6157] synthesizing module 'time_counter' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/stopwatch_dp.v:67]
+	Parameter TICK_COUNT bound to: 100 - type: integer 
+	Parameter BIT_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'time_counter' (15#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/stopwatch_dp.v:67]
+INFO: [Synth 8-6157] synthesizing module 'time_counter__parameterized0' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/stopwatch_dp.v:67]
+	Parameter TICK_COUNT bound to: 60 - type: integer 
+	Parameter BIT_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'time_counter__parameterized0' (15#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/stopwatch_dp.v:67]
+INFO: [Synth 8-6157] synthesizing module 'time_counter__parameterized1' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/stopwatch_dp.v:67]
+	Parameter TICK_COUNT bound to: 24 - type: integer 
+	Parameter BIT_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'time_counter__parameterized1' (15#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/stopwatch_dp.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'stopwatch_dp' (16#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/stopwatch_dp.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clk_dp' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/clock_dp.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clk_div_100_cl' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/clock_dp.v:119]
+	Parameter FCOUNT bound to: 1000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clk_div_100_cl' (17#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/clock_dp.v:119]
+INFO: [Synth 8-6157] synthesizing module 'time_counter_cl' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/clock_dp.v:66]
+	Parameter TICK_COUNT bound to: 100 - type: integer 
+	Parameter BIT_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'time_counter_cl' (18#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/clock_dp.v:66]
+INFO: [Synth 8-6157] synthesizing module 'time_counter_cl__parameterized0' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/clock_dp.v:66]
+	Parameter TICK_COUNT bound to: 60 - type: integer 
+	Parameter BIT_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'time_counter_cl__parameterized0' (18#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/clock_dp.v:66]
+INFO: [Synth 8-6157] synthesizing module 'time_counter_cl__parameterized1' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/clock_dp.v:66]
+	Parameter TICK_COUNT bound to: 24 - type: integer 
+	Parameter BIT_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'time_counter_cl__parameterized1' (18#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/clock_dp.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'clk_dp' (19#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/new/clock_dp.v:3]
+INFO: [Synth 8-6157] synthesizing module 'wwire_combiner' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/top_stopwatch.v:268]
+INFO: [Synth 8-6155] done synthesizing module 'wwire_combiner' (20#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/top_stopwatch.v:268]
+INFO: [Synth 8-6157] synthesizing module 'mux_2x1_sw1' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/top_stopwatch.v:291]
+INFO: [Synth 8-226] default block is never used [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/top_stopwatch.v:298]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2x1_sw1' (21#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/top_stopwatch.v:291]
+INFO: [Synth 8-6157] synthesizing module 'wwire_splitter' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/top_stopwatch.v:308]
+INFO: [Synth 8-6155] done synthesizing module 'wwire_splitter' (22#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/top_stopwatch.v:308]
+INFO: [Synth 8-6157] synthesizing module 'fnd_controller' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clk_divider' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:117]
+	Parameter FCOUNT bound to: 10000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clk_divider' (23#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:117]
+INFO: [Synth 8-6157] synthesizing module 'counter_8' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:168]
+INFO: [Synth 8-6155] done synthesizing module 'counter_8' (24#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:168]
+WARNING: [Synth 8-689] width (4) of port connection 'o_sel' does not match port width (3) of module 'counter_8' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:35]
+INFO: [Synth 8-6157] synthesizing module 'decoder_3x8' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:188]
+INFO: [Synth 8-226] default block is never used [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:195]
+INFO: [Synth 8-6155] done synthesizing module 'decoder_3x8' (25#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:188]
+WARNING: [Synth 8-689] width (4) of port connection 'seg_sel' does not match port width (3) of module 'decoder_3x8' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:39]
+INFO: [Synth 8-6157] synthesizing module 'digit_splitter' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:210]
+	Parameter BIT_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'digit_splitter' (26#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:210]
+INFO: [Synth 8-6157] synthesizing module 'digit_splitter__parameterized0' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:210]
+	Parameter BIT_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'digit_splitter__parameterized0' (26#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:210]
+INFO: [Synth 8-6157] synthesizing module 'digit_splitter__parameterized1' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:210]
+	Parameter BIT_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'digit_splitter__parameterized1' (26#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:210]
+INFO: [Synth 8-6157] synthesizing module 'mux_8x1' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:252]
+INFO: [Synth 8-226] default block is never used [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:266]
+INFO: [Synth 8-6155] done synthesizing module 'mux_8x1' (27#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:252]
+WARNING: [Synth 8-689] width (4) of port connection 'sel' does not match port width (3) of module 'mux_8x1' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:73]
+WARNING: [Synth 8-689] width (4) of port connection 'sel' does not match port width (3) of module 'mux_8x1' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:86]
+INFO: [Synth 8-6157] synthesizing module 'comparator_msec' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:334]
+INFO: [Synth 8-6155] done synthesizing module 'comparator_msec' (28#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:334]
+INFO: [Synth 8-6157] synthesizing module 'mux_2x1' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:235]
+INFO: [Synth 8-226] default block is never used [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:242]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2x1' (29#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:235]
+WARNING: [Synth 8-689] width (2) of port connection 'sw_mode' does not match port width (1) of module 'mux_2x1' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:104]
+INFO: [Synth 8-6157] synthesizing module 'bcdtoseg' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:305]
+INFO: [Synth 8-226] default block is never used [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:312]
+INFO: [Synth 8-6155] done synthesizing module 'bcdtoseg' (30#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:305]
+INFO: [Synth 8-6155] done synthesizing module 'fnd_controller' (31#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/0310_stopwatch_fsm/fnd_controller.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'top_stopwatch' (32#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0311_stopwatch_dot/0311_stopwatch_dot.srcs/sources_1/imports/sources_1/new/top_stopwatch.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Uart_fifo_SW_CL' (33#1) [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/new/Uart_fifo_SW_CL.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1106.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1106.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1106.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1106.961 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/constrs_1/imports/working/Basys-3-Master.xdc]
+Finished Parsing XDC File [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/constrs_1/imports/working/Basys-3-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/constrs_1/imports/working/Basys-3-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Uart_fifo_SW_CL_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Uart_fifo_SW_CL_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1179.301 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1179.301 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1179.301 ; gain = 72.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1179.301 ; gain = 72.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1179.301 ; gain = 72.340
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_CU'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'stopwatch_cu'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'clock_cu'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                   START |                               01 |                               01
+                    DATA |                               10 |                               10
+                    STOP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                   START |                               01 |                               01
+                    DATA |                               10 |                               10
+                    STOP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                              000
+                     RUN |                              101 |                              100
+                   CLEAR |                              100 |                              101
+                    HOUR |                              011 |                              001
+                     MIN |                              010 |                              010
+                     SEC |                              000 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_CU'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    STOP |                              001 |                               00
+                     RUN |                              010 |                               01
+                   CLEAR |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'stopwatch_cu'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                     SEC |                               01 |                               11
+                     MIN |                               10 |                               10
+                    HOUR |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'clock_cu'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1179.301 ; gain = 72.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   20 Bit       Adders := 2     
+	   2 Input   17 Bit       Adders := 4     
+	   2 Input   14 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 4     
+	   2 Input    5 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 9     
+	   2 Input    3 Bit       Adders := 3     
++---Registers : 
+	               20 Bit    Registers := 2     
+	               17 Bit    Registers := 4     
+	               14 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 4     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 28    
++---Muxes : 
+	   2 Input   24 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 4     
+	   2 Input   17 Bit        Muxes := 4     
+	   2 Input   14 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 6     
+	   2 Input    5 Bit        Muxes := 5     
+	   4 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
+	   4 Input    4 Bit        Muxes := 2     
+	   8 Input    4 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 2     
+	   6 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 6     
+	   3 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 14    
+	   2 Input    1 Bit        Muxes := 30    
+	   3 Input    1 Bit        Muxes := 3     
+	   4 Input    1 Bit        Muxes := 27    
+	   6 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1179.301 ; gain = 72.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++----------------+------------------------------------------+-----------+----------------------+-------------+
+|Module Name     | RTL Object                               | Inference | Size (Depth x Width) | Primitives  | 
++----------------+------------------------------------------+-----------+----------------------+-------------+
+|Uart_fifo_SW_CL | U_Uart_Fifo/U_Fifo_RX/U_REG_FILE/mem_reg | Implied   | 16 x 8               | RAM32M x 2	 | 
+|Uart_fifo_SW_CL | U_Uart_Fifo/U_Fifo_TX/U_REG_FILE/mem_reg | Implied   | 16 x 8               | RAM32M x 2	 | 
++----------------+------------------------------------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1179.301 ; gain = 72.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1184.441 ; gain = 77.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping	Report
++----------------+------------------------------------------+-----------+----------------------+-------------+
+|Module Name     | RTL Object                               | Inference | Size (Depth x Width) | Primitives  | 
++----------------+------------------------------------------+-----------+----------------------+-------------+
+|Uart_fifo_SW_CL | U_Uart_Fifo/U_Fifo_RX/U_REG_FILE/mem_reg | Implied   | 16 x 8               | RAM32M x 2	 | 
+|Uart_fifo_SW_CL | U_Uart_Fifo/U_Fifo_TX/U_REG_FILE/mem_reg | Implied   | 16 x 8               | RAM32M x 2	 | 
++----------------+------------------------------------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1185.270 ; gain = 78.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1198.445 ; gain = 91.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1198.445 ; gain = 91.484
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin rx_rd with 1st driver pin 'rptr_reg[3]_i_3/O' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/imports/imports/fpga/0310_stopwatch_fsm/0310_stopwatch_fsm.srcs/sources_1/imports/0310_stopwatch_fsm/btn_debounce.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin rx_rd with 2nd driver pin 'U_Uart_cu/rd_reg/Q' [D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.srcs/sources_1/new/Uart_fifo_SW_CL.v:110]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        1|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1198.445 ; gain = 91.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1198.445 ; gain = 91.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1198.445 ; gain = 91.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1198.445 ; gain = 91.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    30|
+|3     |LUT1   |    21|
+|4     |LUT2   |   141|
+|5     |LUT3   |    52|
+|6     |LUT4   |    67|
+|7     |LUT5   |    59|
+|8     |LUT6   |   117|
+|9     |RAM32M |     4|
+|10    |FDCE   |   295|
+|11    |FDPE   |     5|
+|12    |IBUF   |     9|
+|13    |OBUF   |    17|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1198.445 ; gain = 91.484
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 2 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1198.445 ; gain = 19.145
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1198.445 ; gain = 91.484
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1210.492 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 34 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1210.492 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+113 Infos, 8 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1210.492 ; gain = 103.531
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'D:/working/fpga/0323_uart_final/0321_UART_fifo_SWCL/0321_UART_fifo_SWCL.runs/synth_1/Uart_fifo_SW_CL.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Uart_fifo_SW_CL_utilization_synth.rpt -pb Uart_fifo_SW_CL_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 24 09:57:25 2025...
