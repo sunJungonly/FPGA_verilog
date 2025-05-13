@@ -1,0 +1,14 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+D:/working/fpga/0326_DHT/0326_DHT.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
+D:/working/fpga/0326_DHT/0326_DHT.srcs/sim_1/new/tb_dht11.v,1743043297,verilog,,,,tb_dht11,,,,,,,,
+D:/working/fpga/0326_DHT/0326_DHT.srcs/sim_1/new/tb_dht_io_input.v,1743060567,verilog,,,,tb_dht_io_input,,,,,,,,
+D:/working/fpga/0326_DHT/0326_DHT.srcs/sim_1/new/tb_sensor.v,1743060118,verilog,,,,tb_sensor,,,,,,,,
+D:/working/fpga/0326_DHT/0326_DHT.srcs/sources_1/imports/new/fnd.v,1743059430,verilog,,D:/working/fpga/0326_DHT/0326_DHT.srcs/sources_1/new/mux_2X1.v,,bcdtoseg;clk_divider;counter_4;decoder_2x4;digit_splitter;fnd;mux_4x1,,,,,,,,
+D:/working/fpga/0326_DHT/0326_DHT.srcs/sources_1/new/TOP_sensor.v,1743059451,verilog,,D:/working/fpga/0326_DHT/0326_DHT.srcs/sources_1/new/dht11_ctrl.v,,TOP_sensor,,,,,,,,
+D:/working/fpga/0326_DHT/0326_DHT.srcs/sources_1/new/dht11_ctrl.v,1743060476,verilog,,D:/working/fpga/0326_DHT/0326_DHT.srcs/sources_1/new/mux_2X1.v,,dht11_ctrl,,,,,,,,
+D:/working/fpga/0326_DHT/0326_DHT.srcs/sources_1/new/mux_2X1.v,1743059323,verilog,,D:/working/fpga/0326_DHT/0326_DHT.srcs/sources_1/new/tick_gen_1usec.v,,mux_2X1,,,,,,,,
+D:/working/fpga/0326_DHT/0326_DHT.srcs/sources_1/new/tick_gen_1usec.v,1742970199,verilog,,D:/working/fpga/0326_DHT/0326_DHT.srcs/sources_1/new/top_dht11.v,,tick_gen_1usec,,,,,,,,
+D:/working/fpga/0326_DHT/0326_DHT.srcs/sources_1/new/top_dht11.v,1743059177,verilog,,D:/working/fpga/0326_DHT/0326_DHT.srcs/sim_1/new/tb_dht_io_input.v,,top_dht11,,,,,,,,

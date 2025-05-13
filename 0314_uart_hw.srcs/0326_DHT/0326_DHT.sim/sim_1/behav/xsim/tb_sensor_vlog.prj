@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../0326_DHT.srcs/sources_1/new/TOP_sensor.v" \
+"../../../../0326_DHT.srcs/sources_1/new/dht11_ctrl.v" \
+"../../../../0326_DHT.srcs/sources_1/imports/new/fnd.v" \
+"../../../../0326_DHT.srcs/sources_1/new/mux_2X1.v" \
+"../../../../0326_DHT.srcs/sources_1/new/tick_gen_1usec.v" \
+"../../../../0326_DHT.srcs/sources_1/new/top_dht11.v" \
+"../../../../0326_DHT.srcs/sim_1/new/tb_sensor.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

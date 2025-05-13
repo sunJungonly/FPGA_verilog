@@ -1,0 +1,3 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$stop called at time : 641300 ns : File "D:/working/fpga/0326_DHT/0326_DHT.srcs/sim_1/new/tb_dht_io_input.v" Line 65
